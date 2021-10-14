@@ -15,3 +15,13 @@ export const removeHyphenFromPhone = (phoneNumber: string) => {
         return phoneNumber;
     }
 }
+
+export const sleep = (timer: number): Promise<any> => {
+    return new Promise((resolve, reject)=>{
+        console.log(`waitting ${timer / 1000}sec...`);
+        setTimeout(()=> {
+            console.log("successfully waited");
+            resolve(null)
+        },timer);
+    })
+}
